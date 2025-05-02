@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cek Nama Rekening - inforek.online</title>
+  <link rel="icon" href="https://seocartel.sgp1.cdn.digitaloceanspaces.com/aa4c5ca0e2a83abbf167e49c8a50e834-happy-smile-emoji-emoticon-icon.webp">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb',
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body::before {
+      content: "";
+      background-image: url('https://seocartel.sgp1.cdn.digitaloceanspaces.com/Computer-screen-code-glitch-animation-gif-background-free.gif');
+      background-size: cover;
+      background-position: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      opacity: 0.2;
+      filter: blur(2px);
+      transition: background-image 0.5s ease;
+    }
+
+    @keyframes joget {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-3px); }
+      50% { transform: translateX(3px); }
+      75% { transform: translateX(-3px); }
+      100% { transform: translateX(0); }
+    }
+
+    .joget-neon {
+      color: #ff1d58;
+      font-weight: bold;
+      text-shadow:
+        0 0 5px #ff1d58,
+        0 0 10px #ff1d58,
+        0 0 20px #ff1d58,
+        0 0 40px #ff1d58;
+      animation: joget 1.2s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body class="dark min-h-screen flex flex-col items-center justify-center bg-black text-white transition-all duration-300">
+
+  <div class="mb-4">
+    <img src="https://seocartel.sgp1.cdn.digitaloceanspaces.com/cartel_glowing_neon.gif" alt="Logo" class="h-16 w-auto">
+  </div>
+
+  <div class="bg-gray-900 shadow-xl rounded-2xl p-8 w-full max-w-md border border-gray-700 relative">
+    <div class="absolute right-4 top-4">
+      <button onclick="gantiBackground()" class="text-sm px-3 py-1 rounded bg-gray-700 text-white hover:bg-gray-600 transition">
+        🎥 Tema
+      </button>
+    </div>
+
+    <h1 class="text-xl font-bold text-blue-400 text-center mb-6 flex items-center justify-center gap-2">
+      🔍 Cek Nama Rekening
+    </h1>
+
+    <label class="block mb-1 text-sm font-medium text-gray-300">Bank / E-Wallet</label>
+    <select id="bank" class="w-full mb-4 p-2 border rounded bg-gray-800 text-white border-gray-600">
+      <option value="DANA">DANA</option>        
+      <option value="OVO">OVO</option>
+      <option value="GOPAY">GOPAY</option>
+      <option value="LINKAJA">LINKAJA</option>
+      <option value="SHOPEEPAY">SHOPEEPAY</option>
+      <option value="270">BCA</option>
+      <option value="271">Mandiri</option>
+      <option value="272">BNI</option>
+      <option value="274">BRI</option>
+      <option value="276">CIMB Niaga</option>
+      <option value="282">PERMATA</option>
+      <option value="283">DANAMON</option>
+      <option value="284">MAYBANK</option>
+      <option value="285">MEGA</option>
+      <option value="286">SINARMAS</option>
+      <option value="288">OCBC NISP</option>
+      <option value="360">SEABANK</option>
+      <option value="361">Bank Jago</option>        
+      <option value="277">Muamalat</option>
+      <option value="281">BTN/BTN Syariah</option>
+      <option value="290">BANK BCA SYARIAH</option>
+      <option value="291">Citibank</option>
+      <option value="292">Panin Bank</option>
+      <option value="293">BJB</option>
+      <option value="294">Bank DKI Jakarta</option>
+      <option value="295">BPD DIY</option>
+      <option value="296">BPD JAWA TENGAH</option>
+      <option value="297">BPD JATIM</option>
+      <option value="298">Bank Jambi</option>
+      <option value="299">Bank Aceh Syariah</option>
+      <option value="300">Bank Sumut</option>
+      <option value="301">BANK NAGARI</option>
+      <option value="302">BPD RIAU KEPRI</option>
+      <option value="303">BPD SUMSEL DAN BABEL</option>
+      <option value="304">Bank Lampung</option>
+      <option value="305">BPD KALIMANTAN SELATAN</option>
+      <option value="306">BPD KALIMANTAN BARAT</option>
+      <option value="307">BPD KALIMANTAN TIMUR</option>
+      <option value="308">BPD KALIMANTAN TENGAH</option>
+      <option value="309">BPD SULAWESI BARAT</option>
+      <option value="310">BPD SULAWESI UTARA</option>
+      <option value="317">BPD SULAWESI TENGAH</option>
+      <option value="318">BPD SULAWESI TENGGARA</option>
+      <option value="311">BPD NTB</option>
+      <option value="312">BPD Bali</option>
+      <option value="313">BPD NTT</option>
+      <option value="314">Bank Maluku</option>
+      <option value="315">Bank Papua</option>
+      <option value="316">Bank Bengkulu</option>
+      <option value="319">UOB</option>
+      <option value="322">Bank Artha Graha Internasional</option>
+      <option value="323">HSBC</option>
+      <option value="326">DBS</option>
+      <option value="329">STANDARD CHARTERED BANK</option>
+      <option value="332">BANK JABAR BANTEN SYARIAH</option>
+      <option value="333">ANZ Indonesia</option>
+      <option value="336">BANK BUMI ARTA</option>
+      <option value="340">Bank Mayapada</option>
+      <option value="342">BANK MESTIKA DHARMA</option>
+      <option value="344">Bank Maspion Indonesia</option>
+      <option value="346">ICBC Indonesia</option>
+      <option value="349">Bank Jasa Jakarta</option>
+      <option value="352">BRI Agroniaga</option>
+      <option value="354">BANK NATIONALNOBU</option>
+      <option value="355">BANK MEGA SYARIAH</option>
+      <option value="364">Bank Mayora Indonesia</option>
+      <option value="368">Bank Mandiri Taspen</option>
+      <option value="370">Allo Bank/Bank Harda Internasional</option>
+    </select>
+
+    <label class="block mb-1 text-sm font-medium text-gray-300">Nomor Rekening / HP</label>
+    <input type="text" id="nomor" class="w-full mb-4 p-2 border rounded bg-gray-800 text-white border-gray-600" placeholder="masukkan nomor">
+
+    <button onclick="cekRekening()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded flex items-center justify-center gap-2 transition">
+      🔎 Cek Sekarang
+    </button>
+
+    <div id="hasil" class="mt-6 text-sm text-center"></div>
+  </div>
+
+  <div class="mt-6 text-center">
+    <p class="text-sm joget-neon">
+      inforek.online — Student Today, Superstar Tomorrow 👑
+    </p>
+  </div>
+
+  <script>
+    const bgList = [
+      'https://seocartel.sgp1.cdn.digitaloceanspaces.com/Computer-screen-code-glitch-animation-gif-background-free.gif',
+      'https://seocartel.sgp1.cdn.digitaloceanspaces.com/nodes.gif',
+      'https://seocartel.sgp1.cdn.digitaloceanspaces.com/9bc27292880429.5e569ff84e4d0.gif',
+      'https://seocartel.sgp1.cdn.digitaloceanspaces.com/hacker-gif-7.gif'
+    ];
+    let bgIndex = 0;
+
+    function gantiBackground() {
+      bgIndex = (bgIndex + 1) % bgList.length;
+      document.styleSheets[0].cssRules[0].style.backgroundImage = `url('${bgList[bgIndex]}')`;
+    }
+
+    async function cekRekening() {
+      const bank = document.getElementById('bank').value;
+      const nomor = document.getElementById('nomor').value.trim();
+      const hasil = document.getElementById('hasil');
+
+      hasil.innerHTML = `<div class="text-blue-300 font-medium">⏳ Sedang memproses...</div>`;
+
+      try {
+        const res = await fetch(`/api/checker?kode_bank=${bank}&nomor_rekening=${nomor}`);
+        const data = await res.json();
+
+        if (data.success) {
+          hasil.innerHTML = `
+            <div class="bg-green-700 text-green-100 p-3 rounded shadow-md">
+              ✅ <strong>Nama Pemilik:</strong> ${data.data.nama_pemilik}<br>
+              <span class="text-sm">Bank: ${data.data.nama_bank}<br>Nomor: ${data.data.nomor_rekening}</span>
+            </div>
+          `;
+        } else {
+          hasil.innerHTML = `
+            <div class="bg-red-700 text-red-100 p-3 rounded shadow-md">
+              ❌ ${data.message}
+            </div>
+          `;
+        }
+      } catch (err) {
+        hasil.innerHTML = `
+          <div class="bg-yellow-600 text-yellow-100 p-3 rounded shadow-md">
+            ⚠️ Gagal koneksi ke server.
+          </div>
+        `;
+      }
+    }
+  </script>
+</body>
+</html>
